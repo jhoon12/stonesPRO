@@ -1,0 +1,47 @@
+img{
+    width: 50px;
+    height: 30px;
+    padding-top: 15px;
+}
+#title{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-top: 3%;
+    font-size: 120%;
+}
+
+body {
+    background-color: #ECECEC;
+    text-align: center;
+    }
+form{
+margin-top: -3%;
+display: block;
+}
+.InputSize{
+    margin-top: 5px;
+    width: 30%;
+    height: 70px;
+    padding-left: 10px;
+    border-color:#5D5F9B;
+    border-style: solid;
+    border-radius: 0rem;
+    margin-bottom: 1.5%;
+}
+#signup{
+    margin-top: 3%;
+    border-color:#5D5F9B;
+    border-style: solid;
+    background-color:#5D5F9B;
+    color: white;
+    font-size: 25px;
+    width: 30%;
+    height: 70px;    
+}
+#passwordFalse{
+    opacity: 0;
+    margin-left: 20%;
+    color: red;
+
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="GoalCss.css" />
+    <title>Goal</title>
+</head>
+    <body>
+        <form>
+        <div class="row-list">
+            <div required>당신의 목표는 무엇인가요?</div>
+            <textarea id="Goal"required cols=60 rows=10 style="overflow:hidden"></textarea>
+        </div>
+        <div class="row-list">
+            <div>목표를 언제까지 달성할 것인가요? </div>
+            <input type="date" id="term" required></input>
+        </div>
+        <div class="row-list">
+            <div>당신은 목표를 이루기 위한 계획을 매일 작성할 수 있습니다. 
+            <br>매일 몇 시까지 작성할 건가요?(매일 정해진 시간까지 작성해야합니다)</div>
+            <input type="time" id="SetTime" required></input>
+        </div>
+    </form>
+        <div class="row-list">
+            <button id="btn" > 시작하기! </button>
+        </div>
+        <script src="Goal.js"></script>
+        
+    </body>
+</html>
+<!-- onclick="location.href='./mainUI.html'" -->

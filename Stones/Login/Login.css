@@ -1,0 +1,44 @@
+img{
+    width: 50px;
+    height: 30px;
+    padding-top: 10px;
+}
+
+#title{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-top: 3%;
+    font-size: 120%;
+}
+
+
+body {
+    background-color: #ECECEC;
+    text-align: center;
+    }
+    form{
+        display: block;
+    }
+        .InputSize{
+            margin-top: 10px;
+            width: 30%;
+            height: 70px;
+            padding-left: 10px;
+            border-color:#5D5F9B;
+            border-style: solid;
+            border-radius: 0rem;
+            margin-bottom: 2%;
+            /* 컬러오류 */
+        }
+        #Login{
+            margin-top: 3%;
+            border-color:#5D5F9B;
+            border-style: solid;
+            background-color:#5D5F9B;
+            color: white;
+            font-size: 25px;
+            width: 30%;
+            height: 70px;
+            margin-bottom: 30px;
+        }

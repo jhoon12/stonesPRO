@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Intro</title>
+<link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="intro.css" />
+<style>
+  .font{
+    font-family: 'Gaegu', cursive;
+    font-size: 3rem;
+  }
+</style>
+</head>
+<body>
+<div id="slide">
+  <input type="radio" name="pos" id="pos1" checked>
+  <input type="radio" name="pos" id="pos2">
+  <input type="radio" name="pos" id="pos3">
+  <input type="radio" name="pos" id="pos4">
+
+  <ul class="font">
+    <li>저희는 당신에게 작은 돌멩이를 드립니다.</li>
+    <li>이 돌멩이는 당신이 작성한 목표를 이룰 수 있도록 도와줍니다.</li>
+    <li>그리고 당신이 계획을 이루면 이 돌멩이는 점점 더 가꾸어집니다</li>
+    <li>자 여기 당신을 위한 작은 돌멩이가 있습니다(돌멩이 띄우며)</li>
+    <li>당신의 돌멩이는 어떤 잠재력을 지니고 있나요?</li>
+  </ul>
+
+  <p class="pos">
+    <label for="pos1"></label>
+    <label for="pos2"></label>
+    <label for="pos3"></label>
+    <label for="pos4"></label>
+  </p>
+</div>
+</body> -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="intro.css" />
+  <title>돌멩이 인트로</title>
+  <style>
+    .font{
+      font-family: 'Gaegu', cursive;
+      font-size: 3rem;
+    }
+  </style>
+</head> 
+<div id="popup"></div>
+<body class="font">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">저희는 당신에게 작은 돌멩이를 드립니다.</div>
+      <div class= "swiper-slide">이 돌멩이는 당신이 작성한 목표를 이룰 수 있도록 도와줍니다.</div>
+      <div class="swiper-slide">그리고 당신이 계획을 이루면 이 돌멩이는 점점 더 가꾸어집니다</div>
+      <div class="swiper-slide">자 여기 당신을 위한 작은 돌멩이가 있습니다 </div>
+      <div class="swiper-slide">당신의 돌멩이는 어떤 잠재력을 지니고 있나요?</div>
+      <div class="swiper-slide" id="next_page">목표</div>
+    </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev" id="before" data-value="-1"></div>
+      <div class="swiper-button-next" id="next" data-value="1"></div>
+  </div>
+  
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="intro.js"></script>
+</body>
+</html>

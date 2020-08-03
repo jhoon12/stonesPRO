@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+} 
+.swiper-slide {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+body {
+  background-color: pink;
+}
+* {
+  outline:none;
+}
+.font{
+  font-family: 'Gaegu', cursive;
+  font-size: 3rem;
+}
+
+#popup {
+  opacity:0;
+  top:30%;
+  position: absolute;
+  background-image: url("../Img/stones.png");
+  background-size: contain;
+  width: 120px;
+  height: 90px;
+  left: 50%;
+  margin-left: -50px;
+  bottom: 0px;
+}
+
+#popup.active {
+  animation-name:active;
+  animation-direction : normal;
+  animation-duration:2s;
+  animation-delay: 0.05s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes active {
+  0% {
+     opacity: 0;
+ }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,21 @@
+
+body{
+    text-align: center ;    
+}
+
+.row-list {
+    margin-top:50px;
+}
+
+#btn {
+    display: block;
+    margin: 0 auto;
+   width: 500px;
+   border-width: 5px;
+   height: 100px;
+   
+}
+#Goal{
+    width: 300px;
+    height: 100px;
+}

@@ -1,0 +1,3 @@
+const CONSTANT = {
+    SERVER_ADRESS:"http://13.209.5.215:8000"
+}
