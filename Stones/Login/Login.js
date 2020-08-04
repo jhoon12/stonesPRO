@@ -14,7 +14,7 @@ form.onsubmit = async (e) => {
                 username: Id.value,
                 password: password.value
             }
-        })          
+        })      
         localStorage.setItem("access_token",res.data.access_token);
         localStorage.setItem("refresh_token",res.data.refresh_token);
         if(res.status === 201) 

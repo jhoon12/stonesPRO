@@ -1,4 +1,4 @@
-// const { default: Axios } = require("axios");
+
 const Goal = document.getElementById("Goal");
 const term = document.getElementById("term");
 const setTime = document.getElementById("SetTime");
@@ -27,7 +27,7 @@ btn.onclick = async ()=>{
     try{
         const res = await axios({
         method:'post',
-        url: `http://13.209.5.215:8000/goal`,
+        url: `${CONSTANT.SERVER_ADRESS}/goal`,
         headers : {
             access_token : localStorage.access_token,
         },
@@ -44,6 +44,9 @@ btn.onclick = async ()=>{
         }
         else if(res.status === 500){
             console.log('실패');
+        }
+        else if(res.status){
+
         }
     }catch(err) {
         console.log(err);
