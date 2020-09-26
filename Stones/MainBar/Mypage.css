@@ -1,0 +1,156 @@
+html,
+body {
+  background-color: #ececec;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+.head {
+  height: 100px;
+  padding: 20px 0px 0px 40px;
+  display: flex;
+}
+.headTitle {
+  display: flex;
+}
+#smallStones {
+  padding-top: 17px;
+  width: 30px;
+  height: 30px;
+  padding-right: 30px;
+}
+.title {
+  height: 50px;
+  font-weight: 600;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.smallTitle {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 48px;
+}
+.headTail {
+  display: flex;
+  padding-top: 27px;
+  margin-left: 550px;
+  font-weight: 600;
+}
+.headTail > div:nth-child(2) {
+  height: 25px;
+  margin: 0px 120px;
+  border-bottom: 1px solid #5d5f9b;
+
+  color: #5d5f9b;
+  border-radius: solid;
+  padding: 0;
+}
+
+.headTail > div:nth-child(3) {
+  margin-left: -20px;
+  height: 30px;
+  border-radius: 1rem;
+  border: 1px solid black;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body {
+  padding: 0 40px 0 40px;
+  width: 100vw;
+  height: 300px;
+  display: flex;
+}
+
+.goalContainer {
+  background-color: #5d5f9b;
+  width: 50%;
+  height: 100%;
+}
+.ClockImg {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 100%;
+  padding-top: 20px;
+  padding-left: 100px;
+}
+#goal {
+  padding-top: 30px;
+}
+.tail {
+  width: 100vw;
+  height: 50%;
+  flex: 3;
+  display: flex;
+  padding-right: 1px;
+}
+.tail > div {
+  flex: 1;
+  height: 250px;
+  background-color: white;
+  margin: 20px 40px;
+}
+.ItemTitle {
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+.diary {
+  display: block;
+  resize: none;
+  width: 90%;
+  height: 70%;
+  margin: 0 auto;
+  font-size: 15px;
+}
+.changeBtn {
+  border: none;
+  width: 40%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  margin: 0 auto;
+  background-color: #5d5f9b;
+  border: 1px solid;
+  border-radius: 1rem;
+}
+.leftColor {
+  background-color: #5d5f9b;
+  width: 70px;
+  height: 100%;
+}
+.weekCount {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.week {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+.week > div {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

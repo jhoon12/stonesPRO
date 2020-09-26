@@ -11,12 +11,12 @@ form.onsubmit = async (e) => {
             method: 'post',
             url: `${CONSTANT.SERVER_ADRESS}/user/login`,
             data: {
-                username: Id.value,
+                userId: Id.value,
                 password: password.value
             }
         })      
-        localStorage.setItem("access_token",res.data.access_token);
-        localStorage.setItem("refresh_token",res.data.refresh_token);
+        localStorage.setItem("accessToken",res.data.accessToken);
+        localStorage.setItem("refreshToken",res.data.refreshToken);
         if(res.status === 201) 
             window.location.href = "../Intro/intro.html";
         if (res.status === 200)
