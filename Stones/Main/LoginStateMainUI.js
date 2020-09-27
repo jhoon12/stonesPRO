@@ -4,6 +4,9 @@ const stonesExpression = document.getElementById("stonesExpression");
 const logout = document.getElementById("logout");
 const todo = document.getElementById("todo");
 const add = document.getElementById("add");
+document.getElementById("myStones").onclick =()=>{
+  window.location.href="../MainBar/MyStones.html";
+}
 let addCheck = 1;
 document
   .querySelectorAll(".toDoCheck")
@@ -144,7 +147,7 @@ async function load() {
         errStatus: 401,
         func: () => {
           RefreshRequest();
-          alert("Please Refresh");
+          alert("세션이 만료되었습니다. 새로고침 해주세요");
         },
       },
       {

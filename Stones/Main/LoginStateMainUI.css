@@ -1,241 +1,238 @@
-html,body{
-    margin: 0;
-    height: 100%;
-    width: 100%;
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
 }
-#body{
-    width: 100%;
-    height: 100%;
-    background-color: #5D5F9B;
-}
-
-    #mainBar{
-    display: flex;
-    padding-top: 3%;
-    }
-
-    #mainBar > #smallStones{   
-    margin-top: 20px;
-    margin-left: 10%;
-    width: 50px;
-    height: 35px;
-    padding-right: 1%;
-    }
-
-    #mainBar > #mainBarText{
-    color:white;
-    font-size: 40px;
-    }
-
-    #mainBar > #textQuestion{
-    margin-left: 1%;
-    margin-top: 30px;
-    color:white;    
-    }
-
-#mainBar-menu{
-    padding-top: 1%;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    margin-left: 30%;
-    flex : 6;
-    font-size:20px;
+#body {
+  width: 100%;
+  height: 100%;
+  background-color: #5d5f9b;
 }
 
-#mainBar-menu > #mypage{
-    flex:1.2;
-    padding-top: 5px;
+#mainBar {
+  display: flex;
+  padding-top: 3%;
 }
 
-#mainBar-menu > #myStones{
-    flex:0.9;
-    padding-top: 5px;
-    margin-right: 50px;
+#mainBar > #smallStones {
+  margin-top: 20px;
+  margin-left: 10%;
+  width: 50px;
+  height: 35px;
+  padding-right: 1%;
 }
 
-#mainBar-menu > #logout{
-    text-align: center;
-    width: 100px;
-    padding-top: 3px;
-    margin-right: 100px;
-    border-style: solid;
-    border-radius: 30px;
-    border-color: white;
+#mainBar > #mainBarText {
+  color: white;
+  font-size: 40px;
 }
 
-#centerImg{
-    width:20%;
-    height:30%;
-    display: flex;
-    margin: 0 auto;
-    padding-left: 3%;
-    margin-top:8%;
-}
-    #stonesExpression{
-        flex:1;
-        margin-top:5%;
-        padding-left: 3%;
-        text-align: center;
-        font-size: 30px;
-        color: white;
-        background-size: cover;
-    }
-
-
-    #tail{
-        display: flex;
-        width: 100%;
-        height: 100vh;
-    }
-    
-        #firstLoginClockBox{
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-        }
-        
-            #firstLoginClockPosition{
-                display: flex;
-                
-                justify-content: center;
-                align-items: center;
-                
-            }
-    
-            #firstLoginClockPosition > #firstLoginClockImg{
-                
-                width: 80%;
-                height: 90%;
-            }
-        #firstLoginPlannerBox{
-            width: 50%;
-            background-color: #ECECEC;
-            padding-bottom: 50px;
-        }
-    
-            #firstLoginPlannerBox > #firstLoginPlannerBoxImg{ 
-                display: block;
-                margin: 0 auto;
-                height: 40%;
-                width: 70%;
-                
-            }
-            #todayText{
-                text-align: center;
-                font-size: 20px ;
-            }
-            #TextBox{
-                margin-top: 180px;
-                height: 600rem;
-                flex-direction: column;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color:#5D5F9B;
-               
-            }
-            #NameText{
-                font-size: 50px;
-                padding-right: 380px;
-            }
-            #TimeText{
-        
-                font-size: 35px;
-            }
-            #success{
-                height: 50px;
-                width: 150px;
-                border-style: solid;
-                border-color: #5D5F9B;
-                border-radius: 5px;
-                margin : 0 auto;
-                display: block;
-                margin-top: 5px;  
-               
-            }
-#planBox{
-    margin-top: 20px;
-    height: 45%;
-    padding-left: 50px;
-    display: flex;
-    flex : 2;
-}        
-
-#planBox>#ToDo1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex : 1;
-    
-    
+#mainBar > #textQuestion {
+  margin-left: 1%;
+  margin-top: 30px;
+  color: white;
 }
 
-#planBox>#ToDo2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex : 1;
+#mainBar-menu {
+  padding-top: 1%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-left: 30%;
+  flex: 6;
+  font-size: 20px;
 }
 
-.cell > .toDoCheck{
-    height: 26px;;
-    width: 26px;
-    border-radius: 0em;
-    margin-right: 20px;
-    background-color: white;
-    border-color: #5D5F9B;
-    border-style: solid;
+#mainBar-menu > #mypage {
+  flex: 1.2;
+  padding-top: 5px;
 
+  cursor: pointer;
 }
-.cell{
-    display: flex;
-    align-items:center;
-    margin-bottom: 10px;
 
+#mainBar-menu > #myStones {
+  flex: 0.9;
+  padding-top: 5px;
+  margin-right: 50px;
+
+  cursor: pointer;
+}
+
+#mainBar-menu > #logout {
+  text-align: center;
+  width: 100px;
+  padding-top: 3px;
+  margin-right: 100px;
+  border-style: solid;
+  border-radius: 30px;
+
+  cursor: pointer;
+  border-color: white;
+}
+
+#centerImg {
+  width: 20%;
+  height: 30%;
+  display: flex;
+  margin: 0 auto;
+  padding-left: 3%;
+  margin-top: 8%;
+}
+#stonesExpression {
+  flex: 1;
+  margin-top: 5%;
+  padding-left: 3%;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  background-size: cover;
+}
+
+#tail {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+#firstLoginClockBox {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+#firstLoginClockPosition {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+#firstLoginClockPosition > #firstLoginClockImg {
+  width: 80%;
+  height: 90%;
+}
+#firstLoginPlannerBox {
+  width: 50%;
+  background-color: #ececec;
+  padding-bottom: 50px;
+}
+
+#firstLoginPlannerBox > #firstLoginPlannerBoxImg {
+  display: block;
+  margin: 0 auto;
+  height: 40%;
+  width: 70%;
+}
+#todayText {
+  text-align: center;
+  font-size: 20px;
+}
+#TextBox {
+  margin-top: 180px;
+  height: 600rem;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5d5f9b;
+}
+#NameText {
+  font-size: 50px;
+  padding-right: 380px;
+}
+#TimeText {
+  font-size: 35px;
+}
+#success {
+  height: 50px;
+  width: 150px;
+  border-style: solid;
+  border-color: #5d5f9b;
+  border-radius: 5px;
+  margin: 0 auto;
+  display: block;
+
+  cursor: pointer;
+  margin-top: 5px;
+}
+#planBox {
+  margin-top: 20px;
+  height: 45%;
+  padding-left: 50px;
+  display: flex;
+  flex: 2;
+}
+
+#planBox > #ToDo1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+#planBox > #ToDo2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cell > .toDoCheck {
+  height: 26px;
+  width: 26px;
+  border-radius: 0em;
+  margin-right: 20px;
+  background-color: white;
+  border-color: #5d5f9b;
+  border-style: solid;
+}
+.cell {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .todo {
-    display:flex;
-    padding-top: 25px;
+  display: flex;
+  padding-top: 25px;
 }
 
 .toDoCheck.active {
-    background-color: #5D5F9B;
+  background-color: #5d5f9b;
 }
 .input::placeholder {
-   color: #5D5F9B;
-   letter-spacing: 20px;
-   font-weight: bolder;
-   font-size:20px;
-   height:30px;
+  color: #5d5f9b;
+  letter-spacing: 20px;
+  font-weight: bolder;
+  font-size: 20px;
+  height: 30px;
 }
-.input{
-    height: 40px;
-    width: 180px;
-    border : 0px solid ;
-    background-color: #ECECEC;
-    margin-bottom: 18px;
-    outline:none;
+.input {
+  height: 40px;
+  width: 180px;
+  border: 0px solid;
+  background-color: #ececec;
+  margin-bottom: 18px;
+  outline: none;
 }
-input:focus::placeholder {   
-    font-size:0;
+input:focus::placeholder {
+  font-size: 0;
 }
-#todayText{
-    display:flex;
-    font-size: 30px;
- 
+#todayText {
+  display: flex;
+  font-size: 30px;
 }
-#add{
-    padding-top: 15px;
-    font-size: 15 px;
- 
+#add {
+  padding-top: 15px;
+  font-size: 15 px;
+  cursor: pointer;
 }
-#addBox{
-    padding: 0 103px; 
-    display: flex;
-    justify-content: space-between;
-    color: #5D5F9B;
+#addBox {
+  padding: 0 103px;
+  display: flex;
+  justify-content: space-between;
+  color: #5d5f9b;
 }

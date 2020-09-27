@@ -5,8 +5,9 @@ const setTime = document.getElementById("SetTime");
 const btn = document.getElementById("btn");
 
 
-btn.onclick = async ()=>{
-    const setTime = SetTime.value;
+btn.onclick = async (e)=>{
+    if(Goal.value && term.value && setTime.value){
+      const setTime = SetTime.value;
     const goal = Goal.value;
 
     const todayKorean = new Date();
@@ -65,5 +66,8 @@ btn.onclick = async ()=>{
           ]);
           console.log(err.response.status);
     }
- 
+    }
+    
+    else
+    alert('모든 항목을 입력해주세요!')
 };
