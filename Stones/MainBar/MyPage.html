@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="Mypage.css" />
-
-    
+    <script src="../Const.js"></script>
+    <script src="../RefreshReq.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -24,32 +25,47 @@
     </div>
     <div class="body">
         <div class="goalContainer">
-            <div class="goal">asdasd</div>
-            <div></div>
-            <div></div>
+            <div class="userName">
+                <div>님의 목표</div>
+            </div>
+            <div class="goal"></div>
+            <div class="termBox">
+                기간 : 
+                <div class='term'> 
+                </div>
+            </div>
         </div>
         <img src="../Img/maypageClock.png" class="ClockImg"></img>
     </div>
     <div class="tail">
         <div>
-            <div class="ItemTitle">성찰일지</div>
-            <textarea class="diary"></textarea>
+            <div class="innerBox">
+                <div class="ItemTitle">성찰일지</div>
+                <textarea class="diary" value="" placeholder="입력하세요"></textarea>
+            </div>
+            <div class="submitDiary">등록하기</div>
         </div>
         <div>
-            <div class="ItemTitle">시간설정</div>
-            <div></div>
-                <div class="changeBtn">변경하기</div>
+            <div class="innerBox">
+                <div class="ItemTitle">시간설정</div>
+                <div class="timeBox">
+                    <input value="10" class="time"></input>
+                    <div class="comma">:</div>
+                    <input value="30" class="minutes"></input>
+                </div>
+            </div>
+                <div class="submitDiary">변경하기</div>
         </div>
         <div class="calendarBox">
-            <div class="weekCount">1주차</div>
+            <div class="weekCount">최근 7일</div>
             <div class="week">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div class="CheckToDo"></div>
+                <div class="CheckToDo"></div>
+                <div class="CheckToDo"></div>
+                <div class="CheckToDo"></div>
+                <div class="CheckToDo"></div>
+                <div class="CheckToDo"></div>
+                <div class="CheckToDo"></div>
             </div>
             
         </div>

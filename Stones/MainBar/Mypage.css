@@ -67,12 +67,63 @@ body {
   height: 300px;
   display: flex;
 }
-
+.goal{
+  padding-bottom: 40px;
+  font-size: 20px;
+}
 .goalContainer {
   background-color: #5d5f9b;
   width: 50%;
   height: 100%;
 }
+.goalContainer > div {
+  padding-left: 100px;
+  color: white;
+}
+.termBox {
+  display: flex;
+}
+
+.timeBox {
+  height: 50%;
+  display: flex;
+  margin: 0 auto;
+  flex: 1;
+  justify-content: space-around;
+}
+.timeBox > input {
+  color: #5d5f9b;
+  width: 62px;
+  font-size: 51px;
+  padding-top: 35px;
+  height: 58px;
+  border: none;
+  outline: none;
+  text-align: center;
+  border-bottom: 1px solid #5d5f9b;
+}
+.time {
+  transform: translate(50px, 0px);
+}
+.minutes {
+  transform: translate(-50px, 0px);
+}
+/* .timeBox>input:nth-child(1){
+  margin-left: 100px;
+}
+.timeBox>input:nth-child(2){
+  margin-right: 100px;
+} */
+.comma {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: #5d5f9b;
+  padding-top: 35px;
+}
+
 .ClockImg {
   display: flex;
   justify-content: center;
@@ -81,8 +132,12 @@ body {
   padding-top: 20px;
   padding-left: 100px;
 }
-#goal {
-  padding-top: 30px;
+.userName {
+  padding-top: 60px;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  padding-bottom: 40px;
 }
 .tail {
   width: 100vw;
@@ -110,9 +165,11 @@ body {
   width: 90%;
   height: 70%;
   margin: 0 auto;
+  border: none;
+  outline: none;
   font-size: 15px;
 }
-.changeBtn {
+.submitDiary {
   border: none;
   width: 40%;
   height: 35px;
@@ -125,6 +182,9 @@ body {
   background-color: #5d5f9b;
   border: 1px solid;
   border-radius: 1rem;
+}
+.innerBox {
+  height: 180px;
 }
 .leftColor {
   background-color: #5d5f9b;
@@ -153,4 +213,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.CheckToDo.active {
+  background-color: #5d5f9b;
 }

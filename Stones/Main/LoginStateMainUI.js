@@ -3,12 +3,14 @@ const TimeText = document.getElementById("TimeText");
 const stonesExpression = document.getElementById("stonesExpression");
 const logout = document.getElementById("logout");
 const todo = document.getElementById("todo");
+const add = document.getElementById("add");
+let addCheck = 1;
 document
   .querySelectorAll(".toDoCheck")
   .forEach((element) => (element.onclick = changeStyle));
 document.getElementById("success").onclick = submitPlan;
-document.getElementById("add").onclick = addPlan;
-let arr = new Array(8);
+add.onclick = addPlan;
+
 let TextArr = [];
 
 function submitPlan() {
@@ -18,9 +20,9 @@ function submitPlan() {
   const activeButtonLength = document.querySelectorAll(".toDoCheck.active")
     .length;
   const today = new Date();
-  const goalYear = today.getFullYear();
-  const goalMonth = today.getMonth();
-  const goalDay = today.getDate();
+  const hours = today.getHours();
+  const minutes = today.getMinutes();
+  const timeMinutes = `${hours}:${minutes}`;
   if (activedInputLength === activeButtonLength) {
     (async () => {
       try {
@@ -28,9 +30,7 @@ function submitPlan() {
           method: "post",
           url: `${CONSTANT.SERVER_ADRESS}/todo/success`,
           data: {
-            year: goalYear,
-            month: goalMonth,
-            day: goalDay,
+            time: timeMinutes,
           },
           headers: {
             "access-token": localStorage.accessToken,
@@ -54,49 +54,17 @@ function submitPlan() {
           },
         ]);
         console.log(err.response.status);
+        if (err.response.status === 201) {
+        }
       }
     })().then(alert("할 일을 모두 마쳤습니다!"));
   } else {
-    try {
-      async () => {
-        await axios({
-          method: "post",
-          url: `${CONSTANT.SERVER_ADRESS}/todo/success`,
-          data: {
-            year: goalYear,
-            month: goalMonth,
-            day: goalDay,
-          },
-          headers: {
-            "access-token": localStorage.accessToken,
-          },
-        });
-        alert("아직 할 일이 남아있습니다!");
-      };
-    } catch (e) {
-      ErrorHandler(err.response.status, [
-        {
-          errStatus: 401,
-          func: () => {
-            submitPlan();
-            RefreshRequest();
-            console.log(err.status);
-          },
-        },
-        {
-          errStatus: 403,
-          func: () => {
-            console.log("다시 로그인하세요");
-          },
-        },
-      ]);
-      console.log(err.response.status);
-    }
+    alert("할 일을 모두 마치지 못했습니다!");
   }
 }
 
 async function addPlan() {
-  document.querySelectorAll(".input").forEach((text) => {
+ document.querySelectorAll(".input").forEach((text) => {
     TextArr.push(text.value);
   });
   try {
@@ -104,7 +72,7 @@ async function addPlan() {
       method: "post",
       url: `${CONSTANT.SERVER_ADRESS}/todo`,
       data: {
-        what: TextArr,
+        todo: TextArr,
       },
       headers: {
         "access-token": localStorage.accessToken,
@@ -129,6 +97,10 @@ async function addPlan() {
       },
     ]);
     console.log(err.response.status);
+    if(err.response.status === 409){
+      alert("이미 추가하셨습니다.")
+    }
+  
   }
 }
 
@@ -159,11 +131,11 @@ async function load() {
 
     const todoArr = document.querySelectorAll(".todo");
     TimeText.innerText = `${res.data.main.time}까지 계획을 완료해야 합니다!`;
-    if (res.data.todos) {
-      res.data.todos.forEach((arrElements, index) => {
+    if (res.data.main.todos) {
+      res.data.main.todos.forEach((arrElements, index) => {
         todoArr[
           index
-        ].innerHTML = `<input class="input" value=${arrElements} >`;
+        ].innerHTML = `<input class="input" value=${arrElements.todo} >`;
       });
     }
   } catch (e) {
