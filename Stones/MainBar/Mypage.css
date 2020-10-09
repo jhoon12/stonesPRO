@@ -32,7 +32,7 @@ body {
 .smallTitle {
   display: flex;
   flex-direction: column-reverse;
-  height: 48px;
+  height: 45px;
 }
 .headTail {
   display: flex;
@@ -75,6 +75,7 @@ body {
   background-color: #5d5f9b;
   width: 50%;
   height: 100%;
+  display: flex;
 }
 .goalContainer > div {
   padding-left: 100px;
@@ -220,4 +221,27 @@ body {
 .headTail>div{
   
   cursor: pointer;
+}
+.goalContainer2{
+  flex:1;
+  height: 100%;
+
+}
+.successObj{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.successObjBtn{
+  margin-top: 30px;
+  background-color:#5d5f9b ;
+  border: white solid 3px;
+  color: white;
+  border-radius: 3px;
+  width: 40%;
+  height: 10%;
+  font-weight: bold;
+  outline:none;
 }

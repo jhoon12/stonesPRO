@@ -152,7 +152,7 @@ body {
   border-radius: 5px;
   margin: 0 auto;
   display: block;
-
+  outline:none;
   cursor: pointer;
   margin-top: 5px;
 }

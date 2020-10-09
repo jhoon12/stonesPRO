@@ -9,14 +9,37 @@ const CheckToDo = document.querySelectorAll(".CheckToDo");
 const diary = document.querySelector(".diary");
 const time = document.querySelector(".time");
 const minutes = document.querySelector(".minutes");
+const successObjBtn = document.querySelector(".successObjBtn");
 
-
-  submitDiary[1].onclick = ()=>{
-    try{
-      (async () =>{
-        const res  = await axios.put(`${CONSTANT.SERVER_ADRESS}/profile/time`, {time: `${time.value}:${minutes.value}`}, { headers: { "access-token": localStorage.accessToken } })
-        alert("변경되었습니다.")
-      })();
+successObjBtn.onclick = ()=>{
+  try {
+      (async () => {
+        let date;
+      const today = new Date();
+      const year = today.getFullYear(); // 년도
+      const month = today.getMonth() + 1; // 월
+      if(today.getDate() < 10){
+        date = `0${today.getDate()}`;
+      }
+      else(date = today.getDate())
+      const PostDate = `${year}-${month}-${date}`;
+      console.log(PostDate)
+      const res = await axios.post(
+        `${CONSTANT.SERVER_ADRESS}/goal/success`,
+        { today: PostDate },
+        { headers: { "access-token": localStorage.accessToken } }
+      );
+      if(res.status === 200){
+        alert('성공적으로 완료하셨습니다. 이제 새로운 목표를 만들어보세요!');
+      }
+      else if(res.status === 201){
+        alert('기간내에 마치지 못했습니다. 새로운 목표에 다시 도전해보세요!');
+      }
+      else if(res.status === 202){
+        alert('아직 목표를 설정하지 않았습니다. 새로운 목표를 설정하세요'); 
+      }
+      
+    })();
     }
     catch(err){
       ErrorHandler(err.response.status, [
@@ -35,11 +58,43 @@ const minutes = document.querySelector(".minutes");
           },
         },
       ]);
+
     }
+  
+}
+
+const reset =
+submitDiary[1].onclick = () => {
+  try {
+    (async () => {
+      const res = await axios.put(
+        `${CONSTANT.SERVER_ADRESS}/profile/time`,
+        { time: `${time.value}:${minutes.value}` },
+        { headers: { "access-token": localStorage.accessToken } }
+      );
+      alert("변경되었습니다.");
+    })();
+  } catch (err) {
+    ErrorHandler(err.response.status, [
+      {
+        errStatus: 401,
+        func: () => {
+          alert("세션이 만료되었습니다. 새로고침 해주세요");
+          RefreshRequest();
+          console.log(err.status);
+        },
+      },
+      {
+        errStatus: 403,
+        func: () => {
+          console.log("다시 로그인하세요");
+        },
+      },
+    ]);
   }
+};
 
-
-submitDiary[0].onclick = ()=>{
+submitDiary[0].onclick = () => {
   try {
     (async () => {
       const res = await axios.post(
@@ -68,7 +123,7 @@ submitDiary[0].onclick = ()=>{
     ]);
     console.log(err.response.status);
   }
-}
+};
 
 logout.onclick = () => {
   localStorage.removeItem("accessToken");
@@ -78,7 +133,7 @@ logout.onclick = () => {
 const load = async () => {
   try {
     const { data } = await axios.get(`${CONSTANT.SERVER_ADRESS}/profile`, {
-      headers: { "access-token": localStorage.accessToken },
+      headers: {"access-token": localStorage.accessToken },
     });
     const splitDeadline = data.goal.deadline.split("-");
     term.innerText = `${splitDeadline[0]}년 ${splitDeadline[1]}월 ${splitDeadline[2]}일까지`;
@@ -88,7 +143,7 @@ const load = async () => {
       diaryView.innerText = data.diary.content;
     }
     data.checks.reverse().forEach(({ check }, index) => {
-      check && CheckToDo[ index].classList.add("active");
+      check && CheckToDo[index].classList.add("active");
     });
     const Time = data.time.split(":");
     time.value = Time[0];
@@ -112,6 +167,5 @@ const load = async () => {
     ]);
     console.log(err.response.status);
   }
-
 };
 window.onload = load;

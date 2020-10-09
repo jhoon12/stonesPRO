@@ -18,7 +18,7 @@
             <div class="smallTitle">당신의 돌멩이는 무엇인가요?</div>
         </div>
         <div class="headTail">
-            <div>나의 돌멩이</div>
+            <div onclick="location.href='./MyStones.html'">나의 돌멩이</div>
             <div>마이페이지</div>
             <div id='logout'>로그아웃</div>
         </div>
@@ -26,13 +26,23 @@
     </div>
     <div class="body">
         <div class="goalContainer">
-            <div class="userName">
-                <div>님의 목표</div>
+            <div class="goalContainer1">
+                <div class="userName">
+                    <div>님의 목표</div>
+                </div>
+                <div class="goal"></div>
+                <div class="termBox">
+                    기간 : 
+                    <div class='term'> 
+                    </div>
+                </div>
             </div>
-            <div class="goal"></div>
-            <div class="termBox">
-                기간 : 
-                <div class='term'> 
+            <div class="goalContainer2">
+                <div class="successObj">
+                    <div>목표를 완료하셨나요? </div>
+                    <div>아래 버튼을 누르시고</div>
+                    <div>새로운 목표를 설정하세요!</div>
+                    <button class = "successObjBtn" >완료하기</button>
                 </div>
             </div>
         </div>

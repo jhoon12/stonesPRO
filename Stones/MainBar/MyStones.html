@@ -3,14 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="LoginStateMainUI.css" />
     <link rel="stylesheet" href="../font.css">
     <script src="../Const.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../RefreshReq.js"></script>
+    <link rel="stylesheet" href="../font.css">
+    <link rel="stylesheet" type="text/css" href="MyStones.css" />
     <title>MyStones</title>
 </head>
-<body>
-    
-</body>
+<body class="font">
+    <div class="head">
+        <div class="headTitle" onClick="location.href='../Main/LoginStateMainUI.html'">
+            <img src="../Img/smallStones.png" id="smallStones"></img>
+            <div class="title">돌멩이</div>
+            <div class="smallTitle">당신의 돌멩이는 무엇인가요?</div>
+        </div>
+        <div class="headTail">
+            <div class="myStonesHead">나의 돌멩이</div>
+            <div class="myPage" onclick="location.href='./mypage.html'">마이페이지</div>
+            <div id='logout'>로그아웃</div>
+        </div>
+        </div>
+    <div class="body">
+        <div class="nowStonesBox">
+            <div class="nowLevelBox">
+                <div class="nowLevel">
+                </div>
+            </div>
+            <img src="../Img/Stones1.png" class="nowStonesImg">
+            <div class="ExperienceBar">
+                <div class="Experience"></div>
+            </div>
+        </div>
+        <div class="Encyclopedia">
+            <div class="EncyclopediaBox">
+            <div class="list">
+                <div class="bar"></div>
+                <div class="ListTitle">돌멩이 도감</div>
+                <div class="stonesArr">
+
+                </div>
+                
+            </div>  
+            </div>
+        </div>
+            
+        </div>
+    </div>
+    </div>
+    <script src="MyStones.js"></script>
 </html>

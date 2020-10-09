@@ -4,9 +4,9 @@ const stonesExpression = document.getElementById("stonesExpression");
 const logout = document.getElementById("logout");
 const todo = document.getElementById("todo");
 const add = document.getElementById("add");
-document.getElementById("myStones").onclick =()=>{
-  window.location.href="../MainBar/MyStones.html";
-}
+document.getElementById("myStones").onclick = () => {
+  window.location.href = "../MainBar/MyStones.html";
+};
 let addCheck = 1;
 document
   .querySelectorAll(".toDoCheck")
@@ -67,15 +67,21 @@ function submitPlan() {
 }
 
 async function addPlan() {
- document.querySelectorAll(".input").forEach((text) => {
+  document.querySelectorAll(".input").forEach((text) => {
     TextArr.push(text.value);
   });
+  const today = new Date();
+  const year = today.getFullYear(); // 년도
+  const month = today.getMonth() + 1; // 월
+  const date = today.getDate();
+  const PostDate = `${year}-${month}-${date}`;
   try {
     const res = await axios({
       method: "post",
       url: `${CONSTANT.SERVER_ADRESS}/todo`,
       data: {
         todo: TextArr,
+        today : PostDate
       },
       headers: {
         "access-token": localStorage.accessToken,
@@ -100,10 +106,9 @@ async function addPlan() {
       },
     ]);
     console.log(err.response.status);
-    if(err.response.status === 409){
-      alert("이미 추가하셨습니다.")
+    if (err.response.status === 409) {
+      alert("이미 추가하셨습니다.");
     }
-  
   }
 }
 
@@ -128,6 +133,7 @@ async function load() {
         "access-token": localStorage.accessToken,
       },
     });
+    console.log(res.data.main.stone.level);
     const replaceStr = res.data.phrase.word.replace(/\./g, ".\n"); //정규표현식
     stonesExpression.innerText = `"${replaceStr}"\n -${res.data.phrase.name}-`;
     NameText.innerText = `${res.data.main.name}님`;
