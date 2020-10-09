@@ -4,6 +4,7 @@ const stonesExpression = document.getElementById("stonesExpression");
 const logout = document.getElementById("logout");
 const todo = document.getElementById("todo");
 const add = document.getElementById("add");
+const centerImg = document.getElementById("centerImg");
 document.getElementById("myStones").onclick = () => {
   window.location.href = "../MainBar/MyStones.html";
 };
@@ -133,7 +134,27 @@ async function load() {
         "access-token": localStorage.accessToken,
       },
     });
-    console.log(res.data.main.stone.level);
+    if(res.data.main.stone === null){
+      
+      centerImg.src = "../Img/Stones6.png";
+    }
+    console.log(res.data)
+    switch(res.data.main.stone.level){
+      case 1:
+        centerImg.src ="../Img/Stones1.png"
+        break;
+      case 2:
+        centerImg.src = "../Img/Stones2.png"
+        break;
+      case 3:
+        centerImg.src = "../Img/Stones3.png"
+        break;
+      case 4:
+        centerImg.src = "../Img/Stones4.png"
+        break;
+      case 5:
+        centerImg.src = "../Img/Stones5.png"
+    }
     const replaceStr = res.data.phrase.word.replace(/\./g, ".\n"); //정규표현식
     stonesExpression.innerText = `"${replaceStr}"\n -${res.data.phrase.name}-`;
     NameText.innerText = `${res.data.main.name}님`;
@@ -147,6 +168,7 @@ async function load() {
         ].innerHTML = `<input class="input" value=${arrElements.todo} >`;
       });
     }
+
   } catch (e) {
     ErrorHandler(e.response.status, [
       {

@@ -245,3 +245,17 @@ body {
   font-weight: bold;
   outline:none;
 }
+.MakeNewObjBtn{
+  margin-top: 30px;
+  background-color:#5d5f9b ;
+  border: white solid 3px;
+  color: white;
+  border-radius: 3px;
+  width: 40%;
+  height: 10%;
+  font-weight: bold;
+  outline:none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

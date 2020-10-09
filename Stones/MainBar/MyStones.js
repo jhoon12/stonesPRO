@@ -9,7 +9,7 @@ const GetData = async () => {
     });
     console.log(data.encyclopedia);
     data.encyclopedia.forEach(element => {
-      const Box = document.createElement(Box);
+      const Box = document.createElement('div');
       Box.classList.add("Box");
       stonesArr.appendChild(Box);
 
@@ -30,11 +30,14 @@ const GetData = async () => {
            break;
          case 5:
            levelImg.src = "../Img/Stones5.png"
+           
        }
+       levelImg.classList.add('imgSize')
       Box.appendChild(levelImg)
       
      const goal =  document.createElement('div');
      goal.innerHTML = element.goal;
+     goal.classList.add('goalList')
     Box.appendChild(goal)
 
      const date =  document.createElement('div');
@@ -42,24 +45,24 @@ const GetData = async () => {
     Box.appendChild(date)
 
     });
-    // nowLevel.innerText = `현재 나의 돌멩이 : ${data.stone.level} 단계`
-    // exe.style.width = `${data.stone.exp}%`;
-    // switch(data.stone.level){
-    //   case 1:
-    //     nowStonesImg.src ="../Img/Stones1.png"
-    //     break;
-    //   case 2:
-    //     nowStonesImg.src = "../Img/Stones2.png"
-    //     break;
-    //   case 3:
-    //     nowStonesImg.src = "../Img/Stones3.png"
-    //     break;
-    //   case 4:
-    //     nowStonesImg.src = "../Img/Stones4.png"
-    //     break;
-    //   case 5:
-    //     nowStonesImg.src = "../Img/Stones5.png"
-    // }
+    nowLevel.innerText = `현재 나의 돌멩이 : ${data.stone.level} 단계`
+    exe.style.width = `${data.stone.exp}%`;
+    switch(data.stone.level){
+      case 1:
+        nowStonesImg.src ="../Img/Stones1.png"
+        break;
+      case 2:
+        nowStonesImg.src = "../Img/Stones2.png"
+        break;
+      case 3:
+        nowStonesImg.src = "../Img/Stones3.png"
+        break;
+      case 4:
+        nowStonesImg.src = "../Img/Stones4.png"
+        break;
+      case 5:
+        nowStonesImg.src = "../Img/Stones5.png"
+    }
   } catch (err) {
     ErrorHandler(err.response.status, [
       {

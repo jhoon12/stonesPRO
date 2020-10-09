@@ -141,6 +141,7 @@ body {
     margin-top: 30px;
     font-size: 25px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 .Experience{
     height: 100%;
@@ -175,4 +176,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 300px;
+  width: 100%;
+  flex-direction: column;
+  color:white;
+  font-weight: 700;
+}
+.imgSize{
+  width: 200px;
+  height: 170px;
+  
+}
+.goalList{
+  margin:10px;
 }
