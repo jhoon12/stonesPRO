@@ -31,12 +31,16 @@ successObjBtn.onclick = () => {
         { headers: { "access-token": localStorage.accessToken } }
       );
       if (res.status === 200) {
-        const sign = confirm("목표를 완성했습니다. 새로운 목표를 만들겠습니까?");
+        const sign = confirm(
+          "목표를 완성했습니다. 새로운 목표를 만들겠습니까?"
+        );
         if (sign) {
           window.location.href = "../Goal/Goal.html";
         }
       } else if (res.status === 201) {
-        const sign = confirm("목표를 완성했습니다. 새로운 목표를 만들겠습니까?");
+        const sign = confirm(
+          "목표를 완성했습니다. 새로운 목표를 만들겠습니까?"
+        );
         if (sign) {
           window.location.href = "../Goal/Goal.html";
         }
@@ -136,12 +140,14 @@ const load = async () => {
       headers: { "access-token": localStorage.accessToken },
     });
     console.log(data);
-    if(data.goal === null){
-     const MakeNewGoal =  document.createElement('div');
-     MakeNewGoal.innerHTML = "새 목표 설정하기";
-     MakeNewGoal.classList.add('MakeNewObjBtn');
-     successObj.appendChild(MakeNewGoal);
-     MakeNewGoal.onclick=()=>{ window.location.href = "../Goal/Goal.html"}
+    if (data.goal === null) {
+      const MakeNewGoal = document.createElement("div");
+      MakeNewGoal.innerHTML = "새 목표 설정하기";
+      MakeNewGoal.classList.add("MakeNewObjBtn");
+      successObj.appendChild(MakeNewGoal);
+      MakeNewGoal.onclick = () => {
+        window.location.href = "../Goal/Goal.html";
+      };
     }
     const splitDeadline = data.goal.deadline.split("-");
     term.innerText = `${splitDeadline[0]}년 ${splitDeadline[1]}월 ${splitDeadline[2]}일까지`;
