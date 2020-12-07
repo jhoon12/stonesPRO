@@ -5,5 +5,6 @@
 목표를 이뤄나갈 수 있도록 서비스입니다
 
 ![image](https://user-images.githubusercontent.com/48370840/101314890-d7b5c680-389c-11eb-945e-d64300e45c9d.png)
-![image](https://user-images.githubusercontent.com/48370840/101315114-46931f80-389d-11eb-8a75-33af8607ed89.png)
+![image](https://user-images.githubusercontent.com/48370840/101315318-a5589900-389d-11eb-9127-e02d183eec00.png)
+
 
